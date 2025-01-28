@@ -1,0 +1,544 @@
+/* @font-face {
+    font-family: 'opensans';
+    src: url('fonts/open-sans/opensans-extrabolditalic-webfont.woff2') format('woff2'),
+         url('fonts/open-sans/opensans-extrabolditalic-webfont.woff') format('woff');
+    font-weight: italic;
+    font-style: normal;
+
+} */
+
+
+*, *::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    /* 62.5% of i6px = 10px */
+    font-size: 62.25;
+}
+
+
+/* p {
+    padding: 10px 20px; 
+    border: 5px solid gold; 
+    margin: 0;
+} */
+
+/* body {
+    margin: 10px;
+    width: 300px;
+} */
+
+p {
+    margin: 20px;
+    padding: 0;
+}
+
+/* .box::before {
+    content: "Hello";
+} */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    /* padding: 20px; 
+    border: 5px solid orange; 
+    box-sizing: border-box; */
+    /* display: inline-block; */
+}
+
+/* Overflowing */
+.box1 {
+    border: 3px solid gold;
+    width: 150px;
+    height: 150px;
+    overflow: hidden auto;
+}
+
+/* The text overflows and is visible.
+.box1-visible {
+    overflow: visible;
+  }
+
+  The text overflows and is clipped.
+  .box1-hidden {
+    overflow: hidden;
+  }
+
+  The text overflows and adds scrollbars.
+  .box1-scroll {
+    overflow: scroll;
+  }
+
+  The text overflows and adds scrollbars only if necessary.
+  .box1-auto {
+    overflow: auto;
+  }
+  
+  The text overflows and is clipped without scrollbars.
+  .box1-clip {
+    overflow: clip;
+  }
+  
+  The text overflows and scrollbars overlap the content.
+  .box1-overlay {
+    overflow: overlay;
+  } */
+
+/* Measurement Units */
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+.box3 {
+    width: 50%;
+    height: 100px;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+.box4 {
+    width: 50%;
+    height: 100%;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+
+/* Use of differnt measurements
+.box4 {
+    width: 50%;
+    height: 100vh;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+.box4 {
+    width: 50vw;
+    height: 100vh;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+.box4 {
+    (10x font size of the current element)
+    width: 50em;
+    height: 100vh;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+.box4 {
+    (10x font size of the current element)
+    font-size: 20px;
+    width: 50em;
+    height: 100vh;
+    background-color: gold;
+    border-top: 3px solid orange;
+} */
+
+/* .box5 {
+    10x font size of the root element
+    width: 15rem;
+    height: 100vh;
+    background-color: gold;
+    border-top: 3px solid orange;
+} */
+
+/* Positioning */
+.boxes {
+    border:  3px soid black;
+    position: relative;
+}
+
+.box{
+    width: 5rem;
+    height: 5rem;
+}
+
+.box-one{
+    background-color: gold;
+}
+.box-two{
+    background-color: tomato;
+    position: absolute;
+    right: 0; /*(can also use neative input, same for right)*/
+    bottom: 0; /*(can also use neative input, same for bottom)*/
+    z-index: -11; /*(positive for closer and negative for far)*/ 
+}
+.box-three{
+    background-color: dodgerblue;
+}
+
+/* Floating Elements */
+.tweet{
+    border: 3px solid lightgrey;
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Flexbox */
+.container {
+    border: 3px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap;
+    align-content: center; */
+    height: 90vh;
+}
+
+.boxc {
+    flex-basis: 5rem;
+    flex-grow: 1;/* flex-shrink is opposite of flex-grow*/
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    margin: 1rem;
+}
+
+/* alining
+.box-1 {
+    align-self: flex-start;
+} */
+
+/* Embedding */
+body {
+    margin: 10px;   
+    font-family: 'opensans', Arial, Helvetica, sans-serif;   
+    }  
+    h1 {  
+    font-family: Georgia, "Times New Roman", Times, serif;   
+    }   
+    p1 {   
+    font-weight: normal;
+    }
+
+html {
+    font-size: 100%;
+}
+
+/* System Font Stack, Font Sizing */
+body {
+    margin: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+}
+
+/* for all heading */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;  
+}
+h1 {  
+    font-family: Georgia, "Times New Roman", Times, serif; /*for specific heading*/ 
+    font-size: 4.209rem; 
+    } 
+h2{
+    font-size: 3.157rem;
+} 
+
+@media screen and (min-width: 400px) {
+    html{
+        font-size: 130%;
+    }    
+}
+
+/* Spacing */
+
+/* vetical spacing */
+/* body{
+    line-height: 1.5rem;
+} */
+h1{
+    margin: 3rem 0 1rem;
+}
+
+/* horizontal spacing */
+/* body {
+    letter-spacing: 1px;
+    word-break: 5px;
+} */
+
+/* Ideal Line Length */
+/* p{
+    width: 50ch;
+} */
+
+/* Formatting Text */
+/* p + p(the formating will be appear in the second para) */
+/* p{
+    width: 50ch;
+    text-align: left;
+    text-indent: 1rem;
+    text-decoration: underline;
+    text-transform: capitalize;
+    white-space: nowrap;
+    border: 3px solid gold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 3;
+    column-count: 2;
+    column-gap: 1rem;
+    column-rule: 3px dotted #999;
+    direction: rtl;
+} */
+
+/* Image types and formats */
+/* .meal {
+    width: 100vw;
+} */
+
+/* Background image */
+.body2.style1 {
+    background: url(../css-practice-2/images/bgpaper.jpg);
+    background-repeat: no-repeat;
+    /* background-position: 100px 100px; */
+    background-size: cover;
+    height: 100vh;
+}
+
+.body2.style2 {
+    background: url(images/sanFbg.jpg);
+    background-repeat: no-repeat;
+    /* background-position: 100px 100px; */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 100vh;
+}
+
+.meal {
+    width: 150px;
+    height: auto;
+}
+
+
+/* css sprites */
+/* .bg-dishes{
+    background: url(../css-practice-2/images/dishes.png) 0px -0px;
+    width: 100px; 
+    height: 100px;
+    display: inline-block;
+}
+.bg-airdrop{
+    background: url(../css-practice-2/images/dishes.png) -100px -0px;
+    width: 100px; 
+    height: 100px;
+    display: inline-block;
+}
+.bg-rocket{
+    background: url(../css-practice-2/images/dishes.png) -200px -0px;
+    width: 100px; 
+    height: 100px;
+    display: inline-block;
+}
+.bg-planet{
+    background: url(../css-practice-2/images/dishes.png) -300px -0px;
+    width: 100px; 
+    height: 100px;
+    display: inline-block;
+}
+.bg-ufo{
+    background: url(../css-practice-2/images/dishes.png) -400px -0px;
+    width: 100px; 
+    height: 100px;
+    display: inline-block;
+} */
+
+/* Clipping */
+.meal1{
+    clip-path: polygon(
+        30% 0%, 
+        70% 0%, 
+        100% 30%, 
+        100% 70%, 
+        70% 100%, 
+        30% 100%, 
+        0% 70%, 
+        0% 30%);
+}
+
+/* Filters */
+.meal2{
+    filter: grayscale(70%) blur(3px);
+}
+
+/* High density screens */
+.meal3{
+    width: 400px;
+}
+
+.ufo{
+    width: 100px;
+}
+
+.body5 {background: url(../css-practice-2/images/bgbg.jpg);}
+
+button{
+    background: #0d6efd;
+    color: #fff;
+    border: 0;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"]{
+    border: 1px solid #2fc36a;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus{
+    border-color: #ea0958;
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(6, 183, 247, 0.645);
+}
+
+/* Forms */
+form {
+    width: 50%;
+    padding: 2rem;
+}
+
+textarea{
+    resize: none;
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: transform 0.5s linear 1s;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background: orange;
+    animation-name: pop;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: 10;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation: pop 4s ease-out;
+}
+
+/* .square:hover {
+    transform: scale(1.5);
+    transform: rotate(15deg);
+    transform: skew(15deg);
+    transform: translate(10px, 10px);
+    transform: rotate(45deg) translateX(50px);
+    transform: perspective(200px) rotateY(45deg);
+    transform-origin: 0 50%;
+} */
+
+/* .container{
+    perspective: 200px;
+} */
+
+/* .container:hover .square{
+    transform: perspective(200px) rotateY(45deg);
+    transform-origin: 0 50%;
+    background: dodgerblue;
+} */
+
+/* .container1:hover .box-special{
+    transform: rotateX(45deg);
+} */
+
+/* .animation-pop {
+    animation-name: pop;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction:alternate;
+} */
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: rotate(45deg);
+        background: tomato;
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}
+
+/* .item{
+    background: yellowgreen;
+} */
+
+.nav-item {
+    width: 100%;
+    font-weight: bold;
+    color: tomato;
+    background: #fff;
+}
+
+.nav-item {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-brand {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --primary-color: #ffdd36;
+    --border-size: 2px;
+    --border-radius: 10px;
+}
+
+.one {
+    background: var(--primary-color);
+}
+
+.two {
+    background: var(--primary-color);
+}
+
+.btn {
+    border: 0;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn-primary{
+    background: gold;
+}
+
+.btn-secondary {
+    background: dodgerblue;
+}
